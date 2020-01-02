@@ -1,0 +1,52 @@
+.wrapper {
+    width: 100%;
+    height: 260vw;
+    @include respond(big) {
+        height: 390vw;
+    }   
+}
+.grid-container {
+    width: 100%;
+    height: 240vw;
+    background: $white;
+    display: grid;
+    grid-template-columns: 5vw minmax(4vw, 1fr) 20vw repeat(4, minmax(7vh, 1fr))  7.5vw 10vw;
+        grid-template-rows: 
+        10vh 19vh repeat(4, 11vw)4vw 10vh 15vh /*home*/
+        10vh 25vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
+        5vh 15vh 8vw repeat(1, 32vw) 5vh /*about*/
+        5vh 11vh 11vw repeat(6, 11vh) 10vh;  /*contact*/
+        
+        @include respond (big) {
+            height: 250vw;
+        } 
+
+        @include respond (extra) {
+            height: 330vw;
+        } 
+        @include respond (stab) {
+            grid-template-rows: 
+            10vh 10vh repeat(4, 11vw)4vw 10vh 10vh /*home*/
+            8vh 15vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
+            5vh 15vh 8vw repeat(1, 32vw) 5vh /*about*/
+            5vh 7vh 11vw repeat(3, 11vh) 8vh 11vh 7vh 8vh;  /*contact*/
+        }
+
+        @include respond (phone) {
+            grid-template-rows: 
+            10vh 10vh repeat(4, 11vw)4vw 10vh 5vh /*home*/
+            8vh 15vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
+            5vh 15vh 8vw repeat(1, 32vw) 5vh /*about*/
+            5vh 7vh 11vw repeat(3, 11vh) 8vh 11vh 7vh 8vh;  /*contact*/
+        }
+        @include respond (smallp) {
+            grid-template-rows: 
+            5vh 8vh repeat(4, 11vw)4vw 10vh 5vh /*home*/
+            5vh 10vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
+            3vh 10vh 8vw repeat(1, 32vw) 5vh /*about*/
+            5vh 7vh 11vw repeat(3, 11vh) 8vh 11vh 7vh 8vh;  /*contact*/
+        }
+        
+        
+        
+}

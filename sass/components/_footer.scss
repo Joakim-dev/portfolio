@@ -1,0 +1,30 @@
+.footer {
+    grid-column: 1/ 10;
+    grid-row: 36;
+    background: $border;
+    width: 100%;
+   .foot{
+       width: 90%;
+       height: 100%;
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       list-style: none;
+       p {
+           font-size: $primary;
+           color: $dark-gray;
+       }
+       a {
+           color: $dark-gray;
+           :hover {
+               color: $light-red;
+           }
+       }
+       img:hover {
+          background: $light-red;
+          border-radius: 50%;
+       }
+       
+   }
+    
+}

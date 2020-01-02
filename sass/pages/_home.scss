@@ -1,0 +1,114 @@
+.cell-h1{
+    grid-column: 1/ 10;
+    grid-row: 1;
+    border-bottom: .1rem solid $border;
+}
+.cell-h2 {
+    @include verticalLine (1, 2, 34);
+
+    @include respond (phone) {
+    /*    opacity: 0;   */
+    }   
+}
+.cell-h3 {
+    @include verticalLine (3, 2, 34);
+
+    @include respond (phone) {
+  /*      opacity: 0;   */
+    } 
+}
+.cell-h4 {
+    @include verticalLine (7, 2, 34);
+
+    @include respond (phone) {
+  /*      opacity: 0;   */
+    } 
+}
+.cell-h5 {
+    @include titles;
+    grid-column: 3/ 7;
+    grid-row: 3/ 4;
+    text-align: right;
+    margin-top: -4%;
+    margin-right: -7%;
+
+    @include respond (phone) {
+        grid-column: 3/ 7;
+    }
+}
+.cell-h6 {
+    @include numbers;
+    grid-column: 9;
+    grid-row: 3;
+    margin-top: -25%;
+
+    @include respond (phone) {
+        grid-column: 8;
+        grid-row: 2;
+        align-self: center;
+    }
+
+    @include respond (smallp) {
+        opacity: 0;
+    }
+}
+.cell-h7 {
+    grid-column: 5;
+    grid-row: 5;
+    font-size: $primary;
+    margin-left: -10%;
+    margin-right: -10%;
+
+    @include respond (stab) {
+        margin-left: -20%;
+        margin-bottom: -20%;
+        font-size: 1.2vw;
+    }
+    @include respond (phone) {
+        grid-column: 6/ 8;
+        grid-row: 5/ 7;
+        font-size: 1.2vw;
+    }
+    @include respond (smallp) {
+        font-size: 1.4vw;
+        margin-left: -30%;
+    }
+}
+.cell-h8 {
+    grid-column: 8/ 10;
+    grid-row: 5/ 11;
+    background: linear-gradient(to right,
+    rgba(160,82,45, 0.0), 
+    rgba(160,82,45, 0.3)
+    rgba(160,82,45, 0.0));
+    z-index: 2;
+    @include respond(tab) {
+        grid-column: 7/ 10;
+    }
+    @include respond (phone) {
+        grid-column: 7/ 10;
+        grid-row: 6/ 11;
+    }
+    
+.cell-h9 {
+    grid-column: 7/ 9;
+    grid-row: 7/ 10;
+    background: linear-gradient(to right,
+    rgba(160,82,45, 0.0), 
+    rgba(160,82,45, 0.3)
+    rgba(160,82,45, 0.0));
+    z-index: 5;
+    @include respond(tab) {
+        grid-column: 6/ 8;
+    }
+    @include respond (phone) {
+        display: none;
+    }
+}
+}
+.cell-h10 {
+    grid-column: 1/ 10;
+    grid-row: 1/ 10;
+    background: white;
+    z-index: -1;
+}

@@ -1,0 +1,109 @@
+.cell-a1 {
+    @include titles;
+    grid-column: 5/ 10;
+    grid-row: 24;
+
+    @include respond(extra) {
+        grid-row: 23;
+        align-self: flex-end;
+    }
+
+    @include respond (stab) {
+        grid-row: 23;
+        align-self: center;
+        margin-left: -15%;
+    }
+    @include respond (smallp) {
+        margin-left: -5%;
+    }
+}
+.cell-a2 {
+    @include numbers;
+    grid-column: 9;
+    grid-row: 24;
+    @include respond(extra) {
+        grid-row: 23;
+        align-self: flex-end;
+    }
+    @include respond (stab) {
+        align-self: center;
+    }
+    @include respond(phone) {
+        grid-column: 8;
+        align-self: flex-start;
+    }
+
+    @include respond (smallp) {
+        opacity: 0;
+    }
+    
+}
+.cell-a3 {
+    @include about (25);
+    img {
+        margin: .5vw;
+    }
+
+    @include respond(extra) {
+        grid-row: 24;
+    }
+
+    @include respond (stab) {
+        margin-left: -20%;
+    }
+    @include respond (smallp) {
+        margin-left: -5%;
+    }
+}
+.cell-a4 {
+    @include about (25);
+    margin-top: 47%;
+
+    @include respond (extra) {
+        margin-top: 52%;
+        grid-row: 24;
+    }
+    @include respond (stab) {
+        margin-left: -20%;
+    }
+    @include respond (smallp) {
+        grid-column: 5/ 8;
+        margin-left: -5%;
+        margin-top: 60%;
+    }
+    
+}
+.cell-a5 {
+    @include about (25);
+    margin-top: 86%;
+
+    @include respond (extra) {
+        margin-top: 100%;
+        grid-row: 24;
+    }
+    @include respond (stab) {
+        margin-left: -20%;
+    }
+    @include respond (smallp) {
+        grid-column: 5/ 9;
+        margin-left: -5%;
+        margin-top: 86%;
+    }
+    
+}
+.cell-a6 {
+    grid-column: 3/ 4;
+    grid-row: 22/ 27;
+    background: linear-gradient(to left,
+    rgba(160,82,45, 0.0), 
+    rgba(160,82,45, 0.3)
+    rgba(160,82,45, 0.0));
+    z-index: 5;
+
+    @include respond(extra) {
+        grid-column: 2/ 4;
+    }
+    @include respond (phone) {
+        grid-column: 1/ 4;
+    }
+}
