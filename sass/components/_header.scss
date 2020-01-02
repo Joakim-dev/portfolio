@@ -6,6 +6,7 @@ header {
     justify-content: space-between;
     align-items: center;
     color: $light-gray;  
+    overflow: hidden;
 }
 .logo {
     text-transform: capitalize;
@@ -34,16 +35,19 @@ header {
 .social {
     width: 15%;
     margin-right: 10%;
+    ul {    
     @include listStyles;
+    }
+    
 }
 .burger {
     display: none;
     cursor: pointer;
     div {
-        width: 25px;
-        height: 2px;
+        width: 2.5rem;
+        height: .2rem;
         background-color: $light-gray;
-        margin: 5px;
+        margin: .5rem;
         transition: all 0.3s ease;
     }
  }
@@ -69,7 +73,7 @@ header {
     .menu li {
         opacity: 0;
         a {
-            font-size: 1.4vh;
+            font-size: 3rem;
             letter-spacing: .5vw;
         }
     }   
@@ -130,6 +134,7 @@ header {
         height: 92vh;
         top: 8vh;
         background-color: $dark-gray;
+        font-size: 3rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

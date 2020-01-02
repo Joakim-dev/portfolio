@@ -12,39 +12,53 @@
     display: grid;
     grid-template-columns: 5vw minmax(4vw, 1fr) 20vw repeat(4, minmax(7vh, 1fr))  7.5vw 10vw;
         grid-template-rows: 
-        10vh 19vh repeat(4, 11vw)4vw 10vh 15vh /*home*/
-        10vh 25vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
-        5vh 15vh 8vw repeat(1, 32vw) 5vh /*about*/
-        5vh 11vh 11vw repeat(6, 11vh) 10vh;  /*contact*/
+        10vh 19vh repeat(4, 11vw)4vw 10vh 15vh /*home 9*/
+        10vh 25vh repeat(3, 5vw 10vw 10vw) 5vw/*work 10*/
+        5vh 15vh 15vh  minmax(200px, 10vw) minmax(155px, 10vw) repeat(4, 5rem) /*about 8/27*/
+        20vh 12vw repeat(6, 11vh) 10vh;  /*contact 10/37*/
         
         @include respond (big) {
-            height: 250vw;
+            height: 270vw;
         } 
 
         @include respond (extra) {
             height: 330vw;
+            grid-template-rows: 
+            10vh 10vh repeat(4, 11vw)4vw 10vh 10vh /*home*/
+            8vh 15vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
+            5vh 15vh 15vh minmax(150px, 10vw) minmax(200px, 10vw) 5px /*about*/
+            5vh 5vh 5vw repeat(4, 11vh) 8vh 15vh 10vh 8vh;  /*contact*/
         } 
+        @include respond (tab) {
+            grid-template-rows: 
+            10vh 10vh repeat(4, 11vw)4vw 10vh 10vh /*home*/
+            8vh 15vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
+            5vh 15vh 15vh minmax(150px, 10vw) minmax(200px, 10vw) 5px /*about*/
+            5vh 5vh 5vw repeat(4, 11vh) 8vh 15vh 10vh 8vh;  /*contact*/
+        }
         @include respond (stab) {
             grid-template-rows: 
             10vh 10vh repeat(4, 11vw)4vw 10vh 10vh /*home*/
             8vh 15vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
-            5vh 15vh 8vw repeat(1, 32vw) 5vh /*about*/
-            5vh 7vh 11vw repeat(3, 11vh) 8vh 11vh 7vh 8vh;  /*contact*/
+            5vh 15vh 15vh minmax(150px, 10vw) minmax(200px, 10vw) 5px /*about*/
+            5vh 5vh 5vw repeat(4, 11vh) 8vh 15vh 10vh 8vh;  /*contact*/
         }
 
         @include respond (phone) {
+            height: 400vw;
             grid-template-rows: 
-            10vh 10vh repeat(4, 11vw)4vw 10vh 5vh /*home*/
+            10vh 10vh repeat(4, 11vw)4vw 10vh 10vh /*home*/
             8vh 15vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
-            5vh 15vh 8vw repeat(1, 32vw) 5vh /*about*/
-            5vh 7vh 11vw repeat(3, 11vh) 8vh 11vh 7vh 8vh;  /*contact*/
+            5vh 15vh 15vh minmax(150px, 10vw) minmax(200px, 10vw) 5px /*about*/
+            5vh 5vh 5vw repeat(4, 11vh) 8vh 15vh 10vh 8vh;  /*contact*/
         }
         @include respond (smallp) {
+            height: 505vw;
             grid-template-rows: 
-            5vh 8vh repeat(4, 11vw)4vw 10vh 5vh /*home*/
-            5vh 10vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
-            3vh 10vh 8vw repeat(1, 32vw) 5vh /*about*/
-            5vh 7vh 11vw repeat(3, 11vh) 8vh 11vh 7vh 8vh;  /*contact*/
+            10vh 10vh repeat(4, 11vw)4vw 10vh 10vh /*home*/
+            8vh 15vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
+            5vh 15vh 10vh minmax(200px, 10vw) minmax(210px, 10vw) 5vh /*about*/
+            9vh 7vh 2vw 8vh 8vh repeat(3, 13vh) 7vh 8vh;  /*contact*/
         }
         
         

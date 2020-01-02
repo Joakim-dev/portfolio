@@ -47,12 +47,13 @@
     }
 }
 /*about*/
-@mixin about ($row) {
+@mixin about {
     color: $dark-gray;
     grid-column: 5/ 8;
-    grid-row: $row;
+    margin-left: -20%;
+    margin-right: 0;
     h4 {
-        font-size: $header-minor;
+        font-size: 3rem;
         font-family: 'Righteous', cursive;
         font-weight: 200;
         text-transform: uppercase;

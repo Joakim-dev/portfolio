@@ -4,21 +4,21 @@
     border-bottom: .1rem solid $border;
 }
 .cell-h2 {
-    @include verticalLine (1, 2, 34);
+    @include verticalLine (1, 2, 37);
 
     @include respond (phone) {
     /*    opacity: 0;   */
     }   
 }
 .cell-h3 {
-    @include verticalLine (3, 2, 34);
+    @include verticalLine (3, 2, 37);
 
     @include respond (phone) {
   /*      opacity: 0;   */
     } 
 }
 .cell-h4 {
-    @include verticalLine (7, 2, 34);
+    @include verticalLine (7, 2, 37);
 
     @include respond (phone) {
   /*      opacity: 0;   */
@@ -53,25 +53,39 @@
     }
 }
 .cell-h7 {
-    grid-column: 5;
-    grid-row: 5;
+    grid-column: 5/ 7;
+    grid-row: 5/ 7;
     font-size: $primary;
     margin-left: -10%;
     margin-right: -10%;
+    @include respond (extra) {
+        grid-column: 5/ 7;
+        margin-left: -5%;
+    }
+
+    @include respond (tab) {
+        grid-column: 5/ 7;
+        margin-left: -25%;
+        padding-top: 5%;
+    }
 
     @include respond (stab) {
-        margin-left: -20%;
+        margin-left: -40%;
         margin-bottom: -20%;
-        font-size: 1.2vw;
+        margin-top: -10%;
+        padding-right: 11%;
+        font-size: $primary;
     }
     @include respond (phone) {
         grid-column: 6/ 8;
-        grid-row: 5/ 7;
-        font-size: 1.2vw;
+        grid-row: 5/ 8;
+        padding-right: 11%;
+        font-size: 1.4rem;
     }
     @include respond (smallp) {
         font-size: 1.4vw;
-        margin-left: -30%;
+        margin-left: -35%;
+        font-size: 1.3rem;
     }
 }
 .cell-h8 {
@@ -82,11 +96,8 @@
     rgba(160,82,45, 0.3)
     rgba(160,82,45, 0.0));
     z-index: 2;
-    @include respond(tab) {
-        grid-column: 7/ 10;
-    }
+    
     @include respond (phone) {
-        grid-column: 7/ 10;
         grid-row: 6/ 11;
     }
     
@@ -98,9 +109,6 @@
     rgba(160,82,45, 0.3)
     rgba(160,82,45, 0.0));
     z-index: 5;
-    @include respond(tab) {
-        grid-column: 6/ 8;
-    }
     @include respond (phone) {
         display: none;
     }
