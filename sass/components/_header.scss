@@ -5,7 +5,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: $light-gray;  
+    color: $light-gray; 
     overflow: hidden;
 }
 .logo {
@@ -54,10 +54,9 @@ header {
 
 @include respond (stab) {
     body {
-        overflow-x: hidden;
+        overflow: hidden;
     } 
     .menu{
-        position: absolute;
         right: 0px;
         height: 50vh;
         top: 8vh;
@@ -91,13 +90,13 @@ header {
 }
 @include respond (phone) {
     body {
-        overflow-x: hidden;
+        overflow: hidden;
     }
     .logo {
         font-size: 2.4vh;
     }
     .menu{
-        position: absolute;
+        
         right: 0px;
         height: 42vh;
         top: 8vh;
@@ -121,15 +120,16 @@ header {
         width: 40%;
     }
 }
+
 @include respond (smallp) {
+    overflow: hidden;
     body {
-        overflow-x: hidden;
     }
     .logo {
         font-size: 2.4vh;
     }
     .menu{
-        position: absolute;
+        
         right: 0px;
         height: 92vh;
         top: 8vh;
@@ -155,6 +155,7 @@ header {
         width: 30%;
     }
 }
+
 
 .nav-active {
     transform: translateX(0%);
