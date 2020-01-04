@@ -13,53 +13,28 @@
     align-self: center;
 }
 .cell-w3 {
-    @include numbers;
-    grid-column: 2;
-    grid-row: 11;
+    @include numbers (2, 11);
     color: $white;
     align-self: center;
-
-    @include respond (phone) {
-        align-self: flex-start;
-    }
-
-    @include respond (smallp) {
-        opacity: 0;
-    }
 }
 
 .cell-w4 {
     @include work (13);
 }
-.cell-w4a {
-    margin-left: 8vw;
-    grid-column: 3;
-    grid-row: 13;    
-    align-self: center;
-    z-index: 100;
-    cursor: pointer;
+.img-arrow1 {
+    @include img-arrow(3, 13);
 }
 .cell-w5 {
     @include work (16);
 }
-.cell-w5a {
-    margin-left: 8vw;
-    grid-column: 3;
-    grid-row: 16;    
-    align-self: center;
-    z-index: 100;
-    cursor: pointer;
+.img-arrow2 {
+    @include img-arrow(3, 16);
 }
 .cell-w6 {
     @include work (19);
 }
-.cell-w6a {
-    margin-left: 8vw;
-    grid-column: 3;
-    grid-row: 19;    
-    align-self: center;
-    z-index: 100;
-    cursor: pointer;
+.img-arrow3 {
+    @include img-arrow(3, 19);
 }
 .cell-w7 {
     grid-column: 4/ 9;

@@ -15,10 +15,16 @@
     z-index: 20;
 }
 /*Pagenumbers*/
-@mixin numbers {
+@mixin numbers ($column, $row) {
+    grid-column: $column;
+    grid-row: $row;
     font-size: $numbers;
     font-family: 'Righteous', cursive;
-    letter-spacing: .2rem;
+    letter-spacing: .2rem;    
+
+    @include respond (smallp) {
+        opacity: 0;
+    }
 }
 
 /*To controll different images differently*/
@@ -28,6 +34,41 @@
     object-fit: cover;
     display: block;
 }
+
+/*arrows*/
+@mixin img-arrow ($column, $row) {
+    grid-column: $column;
+    grid-row: $row;
+    width: 9rem;
+    align-self: center;
+    margin-left: 8vw;
+    z-index: 100;
+    cursor: pointer;
+
+    @include respond (extra) {
+        align-self: flex-end;
+        width: 8rem;
+    }
+    @include respond(tab) {
+        margin-left: 20%;
+    }
+    @include respond(stab) {
+        margin-left: 10%;
+        grid-row: $row + 1;
+        align-self: flex-start;
+        width: 5.8rem;
+    }
+    @include respond (phone) {
+        align-self: flex-start;
+        width: 5rem;
+    }
+    @include respond (smallp) {
+        margin-left: 0%;
+        align-self: flex-end;
+        width: 4rem;
+    }
+}
+
 /*work-headers*/
 @mixin work ($row) {
     color: $white;
@@ -44,6 +85,25 @@
         text-transform: uppercase;
         margin-top: .8vh;
         margin-bottom: 2vh;
+    }
+    @include respond(tab) {
+        margin-left: 20%;
+        h4 {
+            font-size: 2rem;
+        }
+    }
+    @include respond(stab) {
+        margin-left: 10%;
+        h4 {
+            font-size: 1.5rem;
+        }
+    }
+    @include respond(smallp) {
+        margin-left: 0%;
+        h4 {
+            font-weight: 100;
+            font-size: 1.3rem;
+        }
     }
 }
 /*about*/
@@ -91,12 +151,10 @@
         height: .3vh;
         background: linear-gradient(90deg,transparent,$red);
     }
-    
     a:hover span:nth-child(1){
         left: 100%;
         transition: 1s;
     } 
-    
     a span:nth-child(3){
         bottom: 0rem;
         right: -100%;
@@ -104,13 +162,11 @@
         height: .3vh;
         background: linear-gradient(270deg,transparent,$red);
     }
-    
     a:hover span:nth-child(3){
         right: 100%;
         transition: 1s;
         transition-delay: .5s;
     }
-    
     a span:nth-child(2){
         top: -100%;
         right: 0;
@@ -118,7 +174,6 @@
         height: 100%;
         background: linear-gradient(180deg,transparent,$red);
     }
-    
     a:hover span:nth-child(2){
         top: 100%;
         transition: 1s;
@@ -131,7 +186,6 @@
         height: 100%;
         background: linear-gradient(360deg,transparent,$red);
     }
-    
     a:hover span:nth-child(4){
         bottom: 100%;
         transition: 1s;

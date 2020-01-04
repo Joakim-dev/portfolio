@@ -113,7 +113,9 @@
     @include respond (smallp) {
         grid-column: 2/ 9;
     }
-}@include respond (smallp) {
+@include respond (smallp) {
         grid-column: 2/ 9;
         margin-right: 5%;
     }
+}
+

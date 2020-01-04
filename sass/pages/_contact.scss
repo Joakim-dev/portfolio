@@ -11,18 +11,11 @@
     z-index: 20;
 }
 .cell-c3 {
-    @include numbers;
-    grid-column: 2;
-    grid-row: 32;
+    @include numbers (2, 32);
     color: $white;
 
     @include respond (phone) {
-        grid-row: 31;
-        align-self: center;
-    }
-
-    @include respond (smallp) {
-        opacity: 0;
+        grid-row: 32;
     }
 }
 .cell-c4 {

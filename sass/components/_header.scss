@@ -1,172 +1,111 @@
 header {
-    width: 100%;
-    grid-row: 1;
     grid-column: 1/ 10;
+    grid-row: 1;
+    z-index: 1000;
+    color: $light-gray;
+}
+
+.navbar {
+    height: 110%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: $light-gray; 
-    overflow: hidden;
+    
 }
-.logo {
+.brand-title {
+    font-size: 2.5rem;
     text-transform: capitalize;
-    font-size: 3.5vh;
-    margin-left: 5%;
+    margin: 5%;
     span {
-        color: $red;
+        color: $light-red;
     }
 }
-.logo:hover {
+.brand-title:hover {
     cursor: pointer;
     animation: logoAnimation 1.6s;
 }
-.navigation {
-    width: 55%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 200;
+.navbar-links {
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: $light-gray;
+            padding: 1.6rem;
+            display: block;
+            font-size: 1.6rem;
+        }
+        a:hover {
+            color: $light-red;
+        }
+    }
 }
-.menu {
-    width: 30%;
-    font-size: $primary;
-    @include listStyles;
+.toggle-button {
+    position: absolute;
+    top: 3.5%;
+    right: 5%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2.1rem;
+    width: 3rem;
+    .bar {
+        height: .3rem;
+        width: 100%;
+        background: $light-gray;
+        border-radius: .1rem;
+    }
 }
 .social {
-    width: 15%;
-    margin-right: 10%;
-    ul {    
-    @include listStyles;
+    width: 8%;
+    margin-right: 5%;
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
     }
-    
+    a {
+        text-decoration: none;
+        color: $light-gray;
+    }
+    a:hover {
+        color: $light-red;
+    }
 }
-.burger {
-    display: none;
-    cursor: pointer;
-    div {
-        width: 2.5rem;
-        height: .2rem;
-        background-color: $light-gray;
-        margin: .5rem;
-        transition: all 0.3s ease;
-    }
- }
 
-@include respond (stab) {
-    body {
-        overflow: hidden;
+@media (max-width: 700px) {
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+     display: none; 
+     width: 100%;
     } 
-    .menu{
-        right: 0px;
-        height: 50vh;
-        top: 8vh;
-        background-color: $dark-gray;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform .5s ease-in;  
+    .social {
+        display: none;
     }
-    .menu li {
-        opacity: 0;
-        a {
-            font-size: 3rem;
-            letter-spacing: .5vw;
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links {
+        ul {
+            width: 100%;
+            flex-direction: column;
+            background: $dark-gray;
         }
-    }   
-    .burger {
-        display: inline-block;
-        margin-right: 15%;
-    }  
-    .social {
-        width: 25%;
+        li {
+            text-align: center;
+        } 
+        a {
+            padding: .5rem 1rem;
+        }
     }
-}
-
-.nav-active {
-    transform: translateX(0%);
-}
-@include respond (phone) {
-    body {
-        overflow: hidden;
-    }
-    .logo {
-        font-size: 2.4vh;
-    }
-    .menu{
-        
-        right: 0px;
-        height: 42vh;
-        top: 8vh;
-        background-color: $dark-gray;
+    .active{
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        transform: translateX(100%);
-        transition: transform .5s ease-in;
     }
-    .menu li {
-        opacity: 0;
-    }
-    .burger {
-        display: inline-block;
-        margin-right: 20%;
-    }
-    .social {
-        width: 40%;
-    }
-}
-
-@include respond (smallp) {
-    overflow: hidden;
-    body {
-    }
-    .logo {
-        font-size: 2.4vh;
-    }
-    .menu{
-        
-        right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: $dark-gray;
-        font-size: 3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        transform: translateX(100%);
-        transition: transform .5s ease-in;
-    }
-    .menu li {
-        opacity: 0;
-    }
-    .burger {
-        display: inline-block;
-        margin-right: 22%;
-    }
-    .social {
-        margin-left: 10%;
-        width: 30%;
-    }
-}
-
-
-.nav-active {
-    transform: translateX(0%);
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-.toggle .line2 {
-    opacity: 0;
-}
-.toggle .line3 {
-    transform: rotate(45deg) translate(-4px, -5px);  
 }

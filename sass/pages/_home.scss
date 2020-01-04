@@ -37,19 +37,14 @@
     }
 }
 .cell-h6 {
-    @include numbers;
-    grid-column: 9;
-    grid-row: 3;
+    @include numbers (9, 3);
     margin-top: -25%;
 
     @include respond (phone) {
         grid-column: 8;
-        grid-row: 2;
-        align-self: center;
-    }
-
-    @include respond (smallp) {
-        opacity: 0;
+        h2 {
+            margin-left: 3rem;
+        }
     }
 }
 .cell-h7 {
