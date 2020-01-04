@@ -31,7 +31,7 @@
         }
         @include respond (stab) {
             grid-template-rows: 
-            10vh 10vh repeat(4, 11vw)4vw 10vh 10vh /*home*/
+            3% 10vh repeat(4, 11vw)4vw 10vh 10vh /*home*/
             8vh 15vh repeat(3, 5vw 10vw 10vw) 5vw/*work*/
             5vh 15vh 15vh minmax(150px, 10vw) minmax(200px, 10vw) 5px /*about*/
             5vh 5vh 5vw repeat(4, 11vh) 8vh 15vh 10vh 8vh;  /*contact*/
