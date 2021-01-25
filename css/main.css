@@ -518,25 +518,93 @@ header {
 }
 
 /*front-end image*/
+.myAcmeMc {
+  font-size: 3rem;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 5;
+  grid-column: 4/ 9;
+  -ms-grid-row: 13;
+  -ms-grid-row-span: 2;
+  grid-row: 13/ 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+}
+
+.myAcmeMc a {
+  text-decoration: none;
+  color: #e6e4e4;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  -webkit-box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.7);
+}
+
+.myAcmeFurn {
+  font-size: 3rem;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 5;
+  grid-column: 4/ 9;
+  -ms-grid-row: 16;
+  -ms-grid-row-span: 2;
+  grid-row: 16/ 18;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+}
+
+.myAcmeFurn a {
+  text-decoration: none;
+  color: #e6e4e4;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  -webkit-box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.7);
+}
+
 .img-4 {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 3;
-  grid-column: 6/ 9;
+  position: relative;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 5;
+  grid-column: 4/ 9;
   -ms-grid-row: 13;
   -ms-grid-row-span: 2;
   grid-row: 13/ 15;
   z-index: 2;
+  object-fit: cover;
 }
 
 .img-acme {
   -ms-grid-column: 4;
-  -ms-grid-column-span: 2;
-  grid-column: 4/ 6;
+  -ms-grid-column-span: 5;
+  grid-column: 4/ 9;
   -ms-grid-row: 13;
   -ms-grid-row-span: 2;
   grid-row: 13/ 15;
@@ -1979,6 +2047,7 @@ header {
   -ms-grid-row: 13;
   grid-row: 13;
   margin-left: 40%;
+  z-index: 100;
 }
 
 .cell-w4 p {
@@ -2085,6 +2154,7 @@ header {
   -ms-grid-row: 16;
   grid-row: 16;
   margin-left: 40%;
+  z-index: 100;
 }
 
 .cell-w5 p {
@@ -2324,5 +2394,9 @@ header {
   background: -webkit-gradient(linear, left top, right top, from(rgba(160, 82, 45, 0)), to(rgba(160, 82, 45, 0.3)));
   background: linear-gradient(to right, rgba(160, 82, 45, 0), rgba(160, 82, 45, 0.3) rgba(160, 82, 45, 0));
   z-index: 5;
+}
+
+.gitlink {
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

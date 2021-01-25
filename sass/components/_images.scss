@@ -47,14 +47,59 @@
   }
 }
 /*front-end image*/
+
+.myAcmeMc {
+  font-size: 3rem;
+  grid-column: 4/ 9;
+  grid-row: 13/ 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  a {
+    text-decoration: none;
+    color: $light-white;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.7);
+  }
+}
+
+.myAcmeFurn {
+  font-size: 3rem;
+  grid-column: 4/ 9;
+  grid-row: 16/ 18;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  a {
+    text-decoration: none;
+    color: $light-white;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.7);
+  }
+}
+
 .img-4 {
   @include images;
-  grid-column: 6/ 9;
+  position: relative;
+  grid-column: 4/ 9;
   grid-row: 13/ 15;
   z-index: 2;
+  object-fit: cover;
 }
 .img-acme {
-  grid-column: 4/ 6;
+  grid-column: 4/ 9;
   grid-row: 13/ 15;
   z-index: 3;
   cursor: pointer;

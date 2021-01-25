@@ -1,117 +1,119 @@
-.cell-h1{
-    grid-column: 1/ 10;
-    grid-row: 1;
-    border-bottom: .1rem solid $border;
+.cell-h1 {
+  grid-column: 1/ 10;
+  grid-row: 1;
+  border-bottom: 0.1rem solid $border;
 }
 .cell-h2 {
-    @include verticalLine (1, 2, 37);
+  @include verticalLine(1, 2, 37);
 
-    @include respond (phone) {
+  @include respond(phone) {
     /*    opacity: 0;   */
-    }   
+  }
 }
 .cell-h3 {
-    @include verticalLine (3, 2, 37);
+  @include verticalLine(3, 2, 37);
 
-    @include respond (phone) {
-  /*      opacity: 0;   */
-    } 
+  @include respond(phone) {
+    /*      opacity: 0;   */
+  }
 }
 .cell-h4 {
-    @include verticalLine (7, 2, 37);
+  @include verticalLine(7, 2, 37);
 
-    @include respond (phone) {
-  /*      opacity: 0;   */
-    } 
+  @include respond(phone) {
+    /*      opacity: 0;   */
+  }
 }
 .cell-h5 {
-    @include titles;
-    grid-column: 3/ 7;
-    grid-row: 3/ 4;
-    text-align: right;
-    margin-top: -4%;
-    margin-right: -7%;
+  @include titles;
+  grid-column: 3/ 7;
+  grid-row: 3/ 4;
+  text-align: right;
+  margin-top: -4%;
+  margin-right: -7%;
 
-    @include respond (phone) {
-        grid-column: 3/ 7;
-    }
+  @include respond(phone) {
+    grid-column: 3/ 7;
+  }
 }
 .cell-h6 {
-    @include numbers (9, 3);
-    margin-top: -25%;
+  @include numbers(9, 3);
+  margin-top: -25%;
 
-    @include respond (phone) {
-        grid-column: 8;
-        h2 {
-            margin-left: 3rem;
-        }
+  @include respond(phone) {
+    grid-column: 8;
+    h2 {
+      margin-left: 3rem;
     }
+  }
 }
 .cell-h7 {
+  grid-column: 5/ 7;
+  grid-row: 5/ 7;
+  font-size: $primary;
+  margin-left: -10%;
+  margin-right: -10%;
+  @include respond(extra) {
     grid-column: 5/ 7;
-    grid-row: 5/ 7;
+    margin-left: -5%;
+  }
+
+  @include respond(tab) {
+    grid-column: 5/ 7;
+    margin-left: -25%;
+    padding-top: 5%;
+  }
+
+  @include respond(stab) {
+    margin-left: -40%;
+    margin-bottom: -20%;
+    margin-top: -10%;
+    padding-right: 11%;
     font-size: $primary;
-    margin-left: -10%;
-    margin-right: -10%;
-    @include respond (extra) {
-        grid-column: 5/ 7;
-        margin-left: -5%;
-    }
-
-    @include respond (tab) {
-        grid-column: 5/ 7;
-        margin-left: -25%;
-        padding-top: 5%;
-    }
-
-    @include respond (stab) {
-        margin-left: -40%;
-        margin-bottom: -20%;
-        margin-top: -10%;
-        padding-right: 11%;
-        font-size: $primary;
-    }
-    @include respond (phone) {
-        grid-column: 6/ 8;
-        grid-row: 5/ 8;
-        padding-right: 11%;
-        font-size: 1.4rem;
-    }
-    @include respond (smallp) {
-        font-size: 1.4vw;
-        margin-left: -35%;
-        font-size: 1.3rem;
-    }
+  }
+  @include respond(phone) {
+    grid-column: 6/ 8;
+    grid-row: 5/ 8;
+    padding-right: 11%;
+    font-size: 1.4rem;
+  }
+  @include respond(smallp) {
+    font-size: 1.4vw;
+    margin-left: -35%;
+    font-size: 1.3rem;
+  }
 }
 .cell-h8 {
-    grid-column: 8/ 10;
-    grid-row: 5/ 11;
-    background: linear-gradient(to right,
-    rgba(160,82,45, 0.0), 
-    rgba(160,82,45, 0.3)
-    rgba(160,82,45, 0.0));
-    z-index: 2;
-    
-    @include respond (phone) {
-        grid-row: 6/ 11;
-    }
-    
-.cell-h9 {
+  grid-column: 8/ 10;
+  grid-row: 5/ 11;
+  background: linear-gradient(
+    to right,
+    rgba(160, 82, 45, 0),
+    rgba(160, 82, 45, 0.3) rgba(160, 82, 45, 0)
+  );
+  z-index: 2;
+
+  @include respond(phone) {
+    grid-row: 6/ 11;
+  }
+
+  .cell-h9 {
     grid-column: 7/ 9;
     grid-row: 7/ 10;
-    background: linear-gradient(to right,
-    rgba(160,82,45, 0.0), 
-    rgba(160,82,45, 0.3)
-    rgba(160,82,45, 0.0));
+    background: linear-gradient(
+      to right,
+      rgba(160, 82, 45, 0),
+      rgba(160, 82, 45, 0.3) rgba(160, 82, 45, 0)
+    );
     z-index: 5;
-    @include respond (phone) {
-        display: none;
+    @include respond(phone) {
+      display: none;
     }
-}
+  }
 }
 .cell-h10 {
-    grid-column: 1/ 10;
-    grid-row: 1/ 10;
-    background: white;
-    z-index: -1;
+  grid-column: 1/ 10;
+  grid-row: 1/ 10;
+  background: white;
+  z-index: -1;
 }

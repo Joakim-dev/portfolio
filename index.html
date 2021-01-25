@@ -34,6 +34,7 @@
                         <ul>
                             <li><a href="www.linkedin.com/in/joakim-wretlind-84ab0b121" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-3x"></i></a></li>
                             <li><a href="https://github.com/Joakim-dev/portfolio.git" target="_blank" rel="noopener"><i class="fa fa-github fa-3x"></i></a></li>
+                            <li><a href="https://codepen.io/joakimwretlind" target="_blank" rel="noopener"><i class="fa fa-codepen fa-3x"></i></a></li>
                         </ul>
                     </div>
                 </nav>
@@ -57,31 +58,33 @@
             </div> 
             <div class="cell-h6"><h2>01</h2></div>
             <div class="cell-h7">
-                <p>Welcome to my portfolio, I hope you'll enjoy it!</p>
-                <p>If you are in need of a new webpage, have any comments on
-                this page or if you just want to say hi, don't hesitate to
-                drop me a note in the contact-section.</p>
+                <h3>Welcome to my portfolio!</h3>
+                <br>
+                <h1>Let's COLLABORATE!</h1>
             </div>
             <div class="cell-h8" data-aos="zoom-in-left" data-aos-offset="10" data-aos-duration="1200"></div>
             <div class="cell-h9" data-aos="zoom-in-left" data-aos-offset="10" data-aos-duration="750"></div>
             <div class="cell-h10"></div>
 
-            <!--WORK section-->
-                <img src="/img/particles.webp" alt="front-end" class="img-4" data-aos="fade-left" data-aos-offset="100">
-                <img src="/img/rain.webp" alt="full-stack" class="img-5" data-aos="fade-left" data-aos-offset="125">
-                <img src="/img/pillar.webp" alt="other" class="img-6" data-aos="fade-left" data-aos-offset="150"> 
+            <!--WORK section-->  
+            <img src="/img/toAcmeMc.png" alt="html and scss" class="img-4" data-aos="fade-left" data-aos-offset="125">
+            
+            <img src="/img/toAcmeFurn.png" alt="html, css and js" class="img-5" data-aos="fade-left" data-aos-offset="125">
+
+            <img src="/img/pillar.webp" alt="other" class="img-6" data-aos="fade-left" data-aos-offset="150"> 
 
             <!--external pages-->
-            <figure class="img-acme"data-aos="fade-left" data-aos-offset="100">
-                <a href="https://acmemc.netlify.com/" class="front-item">
-                  <img
-                    src="/img/AcmeMc.png"
-                    alt="link to Acme mc"
-                    class="acmemc"
-                  />
+            <!-- SCSS for these are _images.scss-->
+            <div class="myAcmeMc" data-aos="fade-left" data-aos-offset="100">
+                <a target="_blank" href="https://acmemc.netlify.app/">
+                    <h2>Acme mc</h2>
                 </a>
-              </figure>          
-                
+            </div>
+            <div class="myAcmeFurn" data-aos="fade-left" data-aos-offset="100">
+                <a target="_blank" href="https://acmefurniture.netlify.app/">
+                    <h2>Acme Furniture</h2>
+                </a>
+            </div>                
             <div id="work" class="cell-w1"></div> 
             <div class="cell-w2">
                 <div class="title__work">
@@ -90,43 +93,20 @@
             </div>
             
             <div class="cell-w3"><h2>02</h2></div>
-            <!--frontend-->
+            <!-- ARROWS AND MODALS -->
+            <!--html + scss-->
             <div class="cell-w4">
                 <p>2020</p>
-                <h4>front-end</h4>
+                <h4>HTML & SCSS</h4>
+               <a class="gitlink" target="_blank" href="https://github.com/Joakim-dev/Acme-MC.git"><i class="fa fa-github fa-3x"></i></a>
             </div>
-            <!--arrow frontend-->
-            <img src="/img/arrow.png" alt="arrow" class="img-arrow3 modal-open"
-                data-modal="modal4">
-                <div id="modal4" class="modal">
-                    <div class="modal__content">
-                        <div class="modal__header">
-                            <span class="modal__close">&times;</span>
-                            <h2>Front-End</h2>
-                        </div>
-                        <div class="modal__body modal__list">
-                           <ul>
-                               <li class="links"><a href="https://acmemc.netlify.com/">
-                                   <button >ACME MC</button>
-                               </a><a href="https://github.com/Joakim-dev/Acme-MC.git" target="_blank" rel="noopener"><i class="fa fa-github fa-3x"></i></a></li>
-                               <p>The goal of this project was to make it rather casual but still nice. A project that you can take parts from to a real life page.</p>
-                           </ul>                            
-                        </div>
-                         <div class="modal__footer">
-                            <h3>2020</h3>
-                        </div>
-                    </div>
-                </div>
-            <!--full-stack-->
-                <img src="/img/arrow.png" alt="arrow" class="img-arrow1 modal-open"
-                data-modal="modal4">
+            <!--Html, Scss & JS -->                
             <div class="cell-w5">
                 <p>2020</p>
-                <h4>full-stack</h4>
+                <h4>HTML, SCSS, JS</h4>
+                <a class="gitlink" target="_blank" href="https://github.com/Joakim-dev/acme-furniture"><i class="fa fa-github fa-3x"></i></a>
             </div>
-            <!--other-->
-            <img src="/img/arrow.png" alt="arrow" class="img-arrow2 modal-open"
-                data-modal="modal4">
+            <!-- Other -->
             <div class="cell-w6">
                 <p>2020</p>
                 <h4>other</h4>
@@ -234,10 +214,11 @@
             <!--career-->
             <div class="cell-a4">
                 <h4>my career</h4>
-                <p>I am a dr. of Naprapathy, who
-                    got interested in programming in 2015 when I took my first Java
-                        course at the university. Via Flutter I went all in on
-                        web-development in 2019.</p>
+                <p>
+                    I am web-developer, making both custom websites as well as wordpress, or why not combine them?
+                    I have my coding-base in Java, and I went via Flutter/ Dart to Javascript in 2018 - 2019, and have been working with web full time since then.
+                </p>
+               
                     <p>Besides coding I also enjoy art and design, and when I can, 
                         I like to work on some 3D projects in Blender.
                     </p>
@@ -265,18 +246,12 @@
                             <br>
                             <h4>The Switch</h4>
                             <p>The main reason for me to switch career was simply a matter of interest. I have always 
-                                loved to create stuff, to learn things, and to use my mind. I did my first Java-course 
-                                at a University in Sweden in 2015. I really liked the java-language, but I felt that 
-                                something was missing.</p>
-                            <p>In 2017 I began with Flutter for mobile applications, where I liked the fact that I could
-                                see on a screen what happened and I could easily create a lot of visual stuff.</p>
-                            <p>In 2019 I switched over to web development. It was not that I didn't like Flutter, I just
-                                felt it a bit narrow.</p>
+                                loved to create stuff, to learn new things and to use my brain.</p>
+                            <p>Some years ago I began with Flutter for mobile applications. I like the way Flutter works, but I felt I wanted to dig deeper into web-development, so here I am.</p>
+                            
                             <br>
                             <h4>Present</h4>
-                            <p>Now I can look back at all the things I've done and learned along the way, but I much rather 
-                                look ahead to all the things I will achieve and learn, both as a human and as a software 
-                                developer.</p>
+                            <p>I love working with web-development and have been freelancing for a while now. I'm alway open for new projects - both short and long term ones.</p>
                         </div>
                         <div class="modal__footer">
                             <h3>2020</h3>
@@ -333,6 +308,8 @@
                     <li><a href="#"><img src="/img/to-top.png" alt="to-top" height="25vh"></a></li>
                     <li><a href="www.linkedin.com/in/joakim-wretlind-84ab0b121" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-3x"></i></a></li>
                     <li><a href="https://github.com/Joakim-dev/portfolio.git" target="_blank" rel="noopener"><i class="fa fa-github fa-3x"></i></a></li>
+                    <li><a href="https://codepen.io/joakimwretlind" target="_blank" rel="noopener"><i class="fa fa-codepen fa-3x"></i></a>
+                    </li>
                 </ul>
             </footer class="footer">
 
